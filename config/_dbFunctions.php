@@ -1,10 +1,6 @@
 <?php
-function bug($e)
-{
-	echo "<pre>";
-	echo $e ; 
-	echo "</pre>";
-}
+require('_connect.php');
+
 // echo getField("sds", "pass", 1);
 
 /**
