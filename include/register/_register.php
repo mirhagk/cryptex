@@ -3,7 +3,7 @@
 if(isset($_POST['user'], $_POST['name'], $_POST['password']))
 {
 	$uName = $_POST['user']; $name = $_POST['name'];
-	$pass = $_POST['pass'];
+	$pass = password_hash($_POST['pass'],PASSWORD_DEFAULT);;
 	// echo $uName; echo $name; echo $pass;
 
 	// Check whether the user already exist

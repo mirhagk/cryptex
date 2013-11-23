@@ -11,7 +11,8 @@ if(isset($_POST['user'],  $_POST['pass']))
 	if (mysql_num_rows($result) > 0)
 	{
 		$row = mysql_fetch_row($result);
-		if ($pass == $row[0])
+		$dbPass = $row[0];
+		if (password_verify($pass,$dbPass))
     {
        $_SESSION['loggedin'] = 1;
        $_SESSION['user'] = $uName;
